@@ -246,7 +246,7 @@ sum(is.na(actvtRawData$steps))
 <pre><code>## [1] 2304
 </code></pre>
 
-<pre><code class="r"># fill in all of the missing data with the mean of same invertal
+<pre><code class="r"># fill in all of the missing data with the mean of same interval
 actvtFillData = actvtRawData
 actvtFillData$steps = ifelse(is.na(actvtRawData$steps),stepsByInterval[stepsByInterval$interval==actvtRawData$interval,&quot;steps&quot;],actvtRawData$steps)
 

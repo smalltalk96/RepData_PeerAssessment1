@@ -83,7 +83,7 @@ sum(is.na(actvtRawData$steps))
 ```
 
 ```r
-# fill in all of the missing data with the mean of same invertal
+# fill in all of the missing data with the mean of same interval
 actvtFillData = actvtRawData
 actvtFillData$steps = ifelse(is.na(actvtRawData$steps),stepsByInterval[stepsByInterval$interval==actvtRawData$interval,"steps"],actvtRawData$steps)
 
